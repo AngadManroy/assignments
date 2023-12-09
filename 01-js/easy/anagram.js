@@ -5,7 +5,15 @@
 */
 
 function isAnagram(str1, str2) {
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+  let arr1 = str1.split("")
+  let arr2 = str2.split("")
 
+  str1 = (arr1.sort()).join("")
+  str2 = (arr2.sort()).join("")
+  if(str1==str2) return true;
+  else return false;
 }
 
 module.exports = isAnagram;

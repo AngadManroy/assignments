@@ -6,6 +6,13 @@
 */
 
 function findLargestElement(numbers) {
+    if (numbers.length === 0){
+        return undefined;
+    }
+
+    const largestNumber = numbers.reduce((max, current) => (current > max ? current : max), numbers[0]);
+
+    return largestNumber;
     
 }
 
